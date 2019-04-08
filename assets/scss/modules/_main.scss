@@ -1,0 +1,16 @@
+main {
+  @media (min-width: $screen-md-min) {
+    width: calc(100% - 300px);
+    float: right;
+    padding-top: 50px;
+    // padding-left: 80px!important;
+    padding-right: 120px!important;
+  }
+}
+.main-wrapper {
+  @extend .clearfix;
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}

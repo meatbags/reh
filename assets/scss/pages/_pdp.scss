@@ -1,0 +1,188 @@
+// random overrides
+p.stock {
+  margin-bottom: 0;
+}
+.woocommerce-variation-add-to-cart {
+  margin-top: 20px;
+}
+
+.single-product {
+  .product {
+    @extend .row;
+    .images {
+      @extend .md-7;
+    }
+    .summary {
+      @extend .md-5;
+    }
+  }
+  h1 {
+    text-align: left;
+  }
+}
+
+.up-sells {
+  clear: both;
+}
+
+
+// product tabs
+
+.product-tabs {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.product-tabs__headings {
+  > div {
+    margin-right: 20px;
+    display: inline-block;
+    cursor: pointer;
+    &.active {
+      border-bottom: 1px solid $black;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.product-tabs__tabs {
+  > div {
+    display: none;
+    &.active {
+      display: block;
+    }
+    a {
+      display: inline-block;
+      margin: 10px 0;
+    }
+  }
+}
+
+// price
+.product-price {
+  margin-bottom: 20px;
+}
+
+// variations
+.variations {
+  div {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  input {
+    position: absolute;
+  	z-index: -1;
+  	opacity: 0;
+    &:checked {
+      + label {
+        border-bottom: 1px solid $black;
+      }
+    }
+  }
+  label {
+    cursor: pointer;
+    &:hover {
+      border-bottom: 1px solid $black;
+    }
+  }
+}
+
+// thumbnails
+.images {
+  @media (min-width: 1250px) {
+    margin-top: -50px;
+  }
+  img {
+    cursor: pointer;
+    width: 100%;
+  }
+}
+
+.image-zoom {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 8888;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}
+
+.image-zoom__close {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  font-size: 28px;
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 9999;
+}
+
+.image-zoom__wrapper {
+  height: 100%;
+  overflow: scroll;
+}
+
+.thumbnails {
+  display: none;
+  @media (min-width: $screen-sm-min) {
+    display: block;
+  }
+  margin-top: 50px;
+  > div {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  img {
+    max-width: 80px;
+    height: auto;
+  }
+  &.zoom {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 9999;
+    img {
+      border: 1px solid $black;
+    }
+  }
+}
+
+.product-info {
+
+}
+.product-info__header {
+  margin-top: 50px;
+  div {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &.active {
+      border-bottom: 1px solid $black;
+    }
+  }
+}
+
+.product-info__content {
+  margin-top: 30px;
+  div {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}

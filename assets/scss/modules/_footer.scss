@@ -1,0 +1,65 @@
+footer {
+  // background: #f2f2f2;
+  @extend .clearfix;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-top: 40px;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  .copyright {
+    display: none;
+  }
+  @media (min-width: $screen-md-min) {
+    padding: 20px 0;
+    margin-top: 50px;
+    .copyright {
+      display: block;
+      float: left;
+      width: 20%;
+    }
+    .menu-footer-links-container {
+      float: right;
+      width: 80%;
+    }
+    ul {
+      text-align: right;
+      li {
+        display: inline-block;
+        margin-left: 15px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.footer-usps {
+  text-align: center;
+  @media (min-width: $screen-md-min) {
+    margin-bottom: 30px;
+    // border-bottom: 1px solid $black;
+    // border-top: 1px solid $black;
+    div {
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+.footer-usps__usp {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  @media (min-width: $screen-md-min) {
+    display: inline-block;
+  }
+}

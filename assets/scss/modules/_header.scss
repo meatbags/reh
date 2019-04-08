@@ -1,0 +1,141 @@
+header.header {
+  .logo {
+    display: inline-block;
+    margin-top: 5px;
+    img {
+      width: 50px;
+    }
+    @media (min-width: $screen-md-min) {
+      position: fixed;
+      top: 45px;
+      left: 120px;
+    }
+    &.zoom {
+      position: fixed;
+      z-index: 9999;
+    }
+  }
+  .menu-btn {
+    text-transform: uppercase;
+    display: inline;
+    float: right;
+    line-height: 2.2;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+  @media (max-width: $screen-sm-max) {
+    position: fixed;
+    background: $white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $header-height-mob;
+    padding: 8px 0;
+    z-index: 99;
+  }
+  @media (min-width: $screen-md-min) {
+    width: 250px;
+    float: left;
+    .menu-btn {
+      display: none;
+    }
+  }
+}
+
+header.header nav {
+  @media (max-width: $screen-sm-max) {
+    display: none;
+    position: fixed;
+    background: $white;
+    z-index: 999;
+    height: calc(100% - $header-height-mob);
+    width: 100%;
+    top: $header-height-mob;
+    left: 0;
+    overflow: hidden;
+    .menu-navigation-container {
+      overflow: scroll;
+      height: 100%;
+      > ul > li {
+        margin-bottom: 30px;
+        > a {
+          border-bottom: 1px solid;
+        }
+      }
+    }
+    .sub-menu li {
+      margin-top: 5px;
+    }
+    .sub-menu .sub-menu {
+      display: none;
+    }
+    ul {
+      text-transform: uppercase;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+    &.active {
+      display: block;
+    }
+  }
+  @media (min-width: $screen-md-min) {
+    // margin-top: 80px;
+    position: fixed;
+    left: 120px;
+    bottom: 180px;
+    ul {
+      text-transform: uppercase;
+      padding: 0;
+      list-style: none;
+      height: auto;
+      @include transition(all 0.3s ease);
+      &.sub-menu {
+        height: 0;
+        display: none;
+        padding: 5px 0 15px 20px;
+        .sub-menu {
+          padding: 5px 0 0 20px;
+        }
+      }
+      li {
+        margin-bottom: 5px;
+        &.current-menu-item {
+          > a {
+            border-bottom: 1px solid;
+          }
+          > .sub-menu {
+            height: auto;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cart-icon {
+  cursor: pointer;
+  position: relative;
+  width: 20px;
+  float: right;
+  @media (min-width: $screen-md-min) {
+    position: fixed;
+    left: 120px;
+    bottom: 110px;
+    width: 30px;
+    float: none;
+  }
+}
+
+.cart-icon__qty {
+  position: absolute;
+  width: 15px;
+  text-align: center;
+  top: 8px;
+  left: 5px;
+  @media (min-width: $screen-md-min) {
+    top: 15px;
+    left: 10px;
+  }
+}

@@ -1,0 +1,36 @@
+// colours
+$black: #000;
+$white: #fff;
+$blue: #336699;
+$red: #de2430;
+$grey: #888;
+
+// breakpoints
+$screen-xs: 480px;
+$screen-xs-min: $screen-xs;
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+$screen-md: 1024px;
+$screen-md-min: $screen-md;
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
+// sizing
+$space: 7px;
+$blogSizeSmall: 350px;
+$blogSizeMedium: 450px;
+$blogSizeLarge: 550px;
+
+// type
+$fontBase: 15px;
+$fontSize: ceil(($fontBase * 1.4));
+$fontSizeMobile: ceil(($fontBase * 1.2));
+$fontSizeSmall: $fontBase;
+$fontSizeSmallMobile: 12px;
+$fontSizeMedium: ceil(($fontBase * 1.7));
+$fontSizeMediumMobile: 22px;
+$fontSizeLarge: ceil(($fontBase * 5));
+$fontSizeLargeMobile: ceil(($fontBase * 4));
