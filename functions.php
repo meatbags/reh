@@ -351,7 +351,9 @@ if( !function_exists("enqueue_dequeue_scripts_styles") ) {
 
       // load custom scripts
       wp_register_script('scripts', get_template_directory_uri() . '/assets/js/scripts-min.js', false, '',true);
+      wp_register_script('scripts_blog', get_template_directory_uri() . '/blog/assets/blog.min.js', false, '',true);
       wp_enqueue_script('scripts');
+      wp_enqueue_script('scripts_blog');
     }
     // enqueue custom stylesheet
     wp_register_style( 'stylesheet', get_template_directory_uri() . '/assets/css/styles.css', array(), '1.0', 'all' );

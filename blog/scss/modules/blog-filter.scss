@@ -1,0 +1,19 @@
+.blog-filter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: $space * 4;
+  user-select: none;
+
+  .blog-filter__item {
+    cursor: pointer;
+
+    &:hover {
+      color: $red;
+    }
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}
