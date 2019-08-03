@@ -28,6 +28,19 @@ class Blog {
         }
       });
     });
+
+    // check default language
+    const target = document.querySelector(".blog-filter");
+    if (target && target.dataset.lang) {
+      const lang = target.dataset.lang;
+      const filter = document.querySelector(`.blog-filter__item[data-filter="${lang}"]`);
+      if (filter) {
+        filter.click();
+      }
+    }
+
+    // show grid
+    document.querySelectorAll(".blog-grid").forEach(e => { e.classList.add('active'); });
   }
 }
 

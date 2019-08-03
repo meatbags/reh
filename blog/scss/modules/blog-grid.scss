@@ -2,6 +2,12 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  opacity: 0;
+  transition: opacity 0.35s;
+
+  &.active {
+    opacity: 1;
+  }
 
   .blog-grid__item {
     width: 33.33%;

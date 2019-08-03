@@ -3,12 +3,13 @@
 Template Name: Blog
 */
 get_header();
+$lang = get_field("default_language");
 ?>
 
 <div class='row margin-fix'>
 	<article id="post-<?php the_ID(); ?>" <?php post_class('sm-12 clearfix post'); ?>>
 		<h1 itemprop="headline"><?php the_title(); ?></h1>
-    <div class='blog-filter'>
+    <div class='blog-filter' data-lang="<?php echo $lang; ?>">
       <div class='blog-filter__item' data-filter='english'>English</div>
       &nbsp;|&nbsp;
       <div class='blog-filter__item' data-filter='deutsch'>Deutsch</div>
